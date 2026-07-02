@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+<div class="col-md-4">
+
+<div class="card">
+
+<div class="card-body">
+
+<h2 class="text-center">
+
+Login
+
+</h2>
+
+<hr>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<input
+class="form-control mb-3"
+type="text"
+name="username"
+placeholder="Username">
+
+<input
+class="form-control mb-3"
+type="password"
+name="password"
+placeholder="Password">
+
+<button class="btn btn-primary w-100">
+
+Login
+
+</button>
+
+</form>
+
+<br>
+
+<a href="{% url 'register' %}">
+Create Account
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
